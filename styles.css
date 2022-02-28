@@ -1,0 +1,154 @@
+:root {
+    --clr-bg: hsl(0, 0%, 81%);
+    --clr-bg-firstGrid: hsl(263, 55%, 52%);
+    --clr-bg-secondGrid: hsl(217, 19%, 35%);
+    --clr-bg-3and4Grid: hsl(0, 0%, 100%);
+    --clr-bg-fifthGrid: hsl(219, 29%, 14%);
+    --clr-light-title: hsl(210, 46%, 95%);
+    --clr-light-title-50: hsla(210, 46%, 95%, 50%);
+    --clr-dark-title: hsl(219, 29%, 14%);
+    --clr-dark-title-50: hsla(219, 29%, 14%, 50%);
+    --clr-light-paragraph: hsl(210, 46%, 95%);
+    --clr-light-paragraph-70: hsla(210, 46%, 95%, 70%);
+    --clr-dark-paragraph: hsl(219, 29%, 14%);
+    --clr-dark-paragraph-70: hsla(219, 29%, 14%, 70%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: var(--clr-bg);
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 282px 266px;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas: "danielClifford danielClifford jonathanWalters kiraWhittle" "janetteHarmon patrickAbrams patrickAbrams kiraWhittle";
+    width: 1110px;
+    height: 572px;
+}
+
+.grid {
+    border-radius: 0.75em;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.5em;
+}
+
+.danielClifford {
+    grid-area: danielClifford;
+    background: var(--clr-bg-firstGrid) url(images/bg-pattern-quotation.svg) no-repeat;
+    background-position: top right 80px;
+}
+
+.janetteHarmon {
+    grid-area: janetteHarmon;
+    background-color: var(--clr-bg-3and4Grid);
+}
+
+.patrickAbrams {
+    grid-area: patrickAbrams;
+    background-color: var(--clr-bg-fifthGrid);
+}
+
+.jonathanWalters {
+    grid-area: jonathanWalters;
+    background-color: var(--clr-bg-secondGrid);
+}
+
+.kiraWhittle {
+    grid-area: kiraWhittle;
+    background-color: var(--clr-bg-3and4Grid);
+}
+
+.informations {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.informations img {
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 1em;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.informations li:first-child {
+    color: var(--clr-light-title);
+    font-weight: 500;
+}
+
+.informations li:last-child {
+    color: var(--clr-light-title-50);
+    font-weight: 500;
+}
+
+.janetteHarmon .informations li:first-child,
+.kiraWhittle .informations li:first-child {
+    color: var(--clr-bg-dark-title);
+    font-weight: 500;
+}
+
+.janetteHarmon .informations li:last-child,
+.kiraWhittle .informations li:last-child {
+    color: var(--clr-dark-title-50);
+    font-weight: 500;
+}
+
+.box-text {
+    line-height: 1.5em;
+}
+
+.box-text h1 {
+    line-height: 1.1em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--clr-light-paragraph);
+    margin-bottom: 1.3em;
+}
+
+.box-text p {
+    font-size: 1.05em;
+    color: var(--clr-light-paragraph-70);
+}
+
+.janetteHarmon .box-text h1,
+.kiraWhittle .box-text h1 {
+    color: var(--clr-dark-paragraph);
+    font-weight: 500;
+}
+
+.janetteHarmon .box-text h1 {
+    margin-right: 50px;
+}
+
+.janetteHarmon .box-text p,
+.kiraWhittle .box-text p {
+    color: var(--clr-dark-paragraph-70);
+    font-weight: 500;
+}
+
+@media (max-width: 1150px) {
+    .wrapper {
+        max-width: 730px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1em;
+        margin-top: -125px;
+    }
+}
