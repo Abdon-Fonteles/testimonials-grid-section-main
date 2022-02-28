@@ -147,7 +147,6 @@ body {
         max-width: 730px;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         margin: 1em;
         margin-top: -125px;
     }
