@@ -24,7 +24,7 @@
 }
 
 body {
-    background-color: var(--clr-bg);
+    background-color: var(--clr-light-title);
     height: 900px;
     display: flex;
     align-items: center;
